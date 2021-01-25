@@ -1,0 +1,104 @@
+/* Readability */
+body {
+  background-color: #fff;
+}
+
+/* Incorrect spacing; `.container` was missed */
+.header-area .row {
+  padding: 0;
+}
+
+/* Consistently apply spacing */
+.user-menu li {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+/* Consistent display: the whole `.user-menu li a` base rule in style.css should be removed */
+.user-menu li a {
+  display: inline;
+  font-size: inherit;
+  margin-right: 0;
+  padding: 0;
+}
+
+.navbar-brand {
+  /* Ensure logo doesn't vertically overflow navbar */
+  height: auto;
+  /* Improve spacing */
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Force wrapping on sm screens */
+@media (max-width: 767.98px) {
+  .navbar-toggleable-sm {
+    clear: both;
+  }
+}
+
+/* Improve spacing */
+.maincontent-body {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) { 
+  .maincontent-body {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+#main-title {
+}
+
+/* Fix homepage panels (.app-name reused out of context) */
+.row.app-name {
+  padding-left: 0;
+}
+.row.app-name:hover, .row.app-name:focus {
+  text-decoration: none;
+}
+
+/* Readability / a11y */
+.panel-default.welcome .panel-title > a::after {
+  content: " >";
+  padding-left: .5rem;
+  font-weight: bolder;
+}
+
+/* Readability / a11y */
+.panel-default.welcome .panel-title > a:hover,
+.panel-default.welcome .panel-title > a:focus {
+  color: #fff;
+}
+
+/* Improve spacing */
+dmp-form tabcontainer {
+  display: block;
+  margin-top: 1.5rem;
+}
+
+dmp-form .tab-pane {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+dmp-form .h3-header {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Readability / a11y */
+.help-block {
+  color: #686868;
+}
+
+/* Appearance */
+.jcu-footer {
+  margin-top: 1rem;
+  border-top: 1px solid #ccc;
+  background-color: #f0f0f0;
+  font-size: 1rem;
+}
