@@ -1,6 +1,52 @@
-/* Readability */
+/* Readability / a11y */
 body {
   background-color: #fff;
+}
+
+.btn-default {
+  background-color: #f0f0f0;
+  border-color: #eee;
+}
+
+.btn-warning {
+  color: #212529;
+  background-color: #edb800;
+  border-color: #edb800;
+}
+
+.btn-warning:hover,
+.btn-warning:focus {
+  background-color: #c79a00;
+  border-color: #ba9000;
+}
+
+.btn-warning:focus {
+  box-shadow: 0 0 0 0.2rem rgba(206, 162, 6, 0.5);
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #007faf;
+  border-color: #007faf;
+}
+
+.btn-info:hover,
+.btn-info:focus {
+  background-color: #006389;
+  border-color: #005a7c;
+}
+
+.btn-info:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 146, 187, 0.5);
+}
+
+.text-danger {
+  color: #da291c !important;
+}
+
+/* Remove doubled-up carets on dropdown toggles */
+.dropdown-toggle > .caret {
+  display: none;
 }
 
 /* Incorrect spacing; `.container` was missed */
@@ -31,6 +77,12 @@ body {
   padding-right: 0;
 }
 
+/* Spacing fix; use margin, not padding on links */
+.nav-link.app-name {
+  margin-left: 10px;
+  padding-left: 0;
+}
+
 /* Force wrapping on sm screens */
 @media (max-width: 767.98px) {
   .navbar-toggleable-sm {
@@ -50,7 +102,12 @@ body {
   }
 }
 
-#main-title {
+/* Footer appearance */
+.jcu-footer {
+  margin-top: 1rem;
+  border-top: 1px solid #ccc;
+  background-color: #f0f0f0;
+  font-size: 1rem;
 }
 
 /* Fix homepage panels (.app-name reused out of context) */
@@ -61,6 +118,23 @@ body {
   text-decoration: none;
 }
 
+/* Overflowing homepage panels */
+@media (min-width: 768px) { 
+  .row.app-name {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .panel-default.welcome {
+    height: 100%;
+    min-height: 300px;
+  }
+}
+
+.homepanel .panel-default .panel-body[style] {
+  height: auto !important;
+}
+
 /* Readability / a11y */
 .panel-default.welcome .panel-title > a::after {
   content: " >";
@@ -69,6 +143,9 @@ body {
 }
 
 /* Readability / a11y */
+.panel-default.welcome {
+  background-color: #000;
+}
 .panel-default.welcome .panel-title > a:hover,
 .panel-default.welcome .panel-title > a:focus {
   color: #fff;
@@ -87,7 +164,7 @@ dmp-form .tab-pane {
 
 dmp-form .h3-header {
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: .75rem;
 }
 
 /* Readability / a11y */
@@ -95,10 +172,108 @@ dmp-form .h3-header {
   color: #686868;
 }
 
-/* Appearance */
-.jcu-footer {
-  margin-top: 1rem;
-  border-top: 1px solid #ccc;
-  background-color: #f0f0f0;
-  font-size: 1rem;
+/* Permission ID wrapping */
+rb-recordpermissions .table {
+  table-layout: fixed;
+}
+
+rb-recordpermissions .table > tr > td:first-child {
+  width: 50%;
+  word-wrap: anywhere;
+  overflow-wrap: anywhere;
+}
+
+.main-expand-collapse {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Data Record / Data Publication edit forms */
+dmp-field label,
+.label-font {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+dmp-field rb-relatedobjectselector .btn,
+dmp-field button[aria-label="Help"] {
+  margin-left: 1rem;
+}
+
+dmp-field rb-relatedobjectselector td {
+  cursor: pointer;
+}
+
+/* Data Publication published page ("Landing page") */
+/* a11y */
+.panel-default > .panel-heading a:hover,
+.panel-default > .panel-heading a:focus {
+  color: #fff;
+}
+
+/* Usability - entire panel title is clickable */
+.view-accordion .panel-title {
+  display: block;
+}
+.view-accordion .panel-title > a,
+.view-accordion .panel-title > small,
+.view-accordion .panel-title > .small,
+.view-accordion .panel-title > small > a,
+.view-accordion .panel-title > .small > a {
+  display: block;
+  padding: 10px 15px;
+}
+.view-accordion .panel-heading {
+  padding: 0;
+}
+
+/* Hide errant br tags */
+li.key-value-pair > br {
+  display: none;
+}
+
+/* Form headings */
+.h1-header {
+  line-height: 1.2;
+}
+
+repeatable-group > .key-value-pair > .key {
+  font-size: 125%;
+  font-weight: 700;
+}
+
+/* Form subheadings */
+.key-value-pair > .key {
+  font-weight: 600;
+}
+
+/* Form sections */
+.key-value-pair,
+repeatable-group > .key-value-pair {
+  display: block;
+  padding-bottom: 10px; /* Matches margin-top */
+  border-bottom: 1px solid #ccc;
+}
+
+repeatable-vocab .value .key-value-pair,
+repeatable-textfield .value .key-value-pair,
+repeatable-group .value .key-value-pair {
+  padding-bottom: 0;
+  border-bottom: 0 none;
+}
+
+/* Form subsections */
+repeatable-group .form-group:not(:last-child) {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+repeatable-group .form-group:last-child {
+  margin-bottom: 0;
+}
+
+/* Show whole search panel - https://trello.com/c/iAiPojHm/199-search-page-panel-cuts-off-drop-down-menu */
+.panel-body[style^="overflow"] {
+  overflow: visible !important;
 }
