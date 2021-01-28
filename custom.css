@@ -139,6 +139,7 @@ body {
 .panel-default.welcome .panel-title > a::after {
   content: " >";
   padding-left: .5rem;
+  white-space: nowrap;
   font-weight: bolder;
 }
 
