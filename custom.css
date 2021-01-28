@@ -178,18 +178,18 @@ rb-recordpermissions .table {
   table-layout: fixed;
 }
 
-rb-recordpermissions .table > tr > td:first-child {
+rb-recordpermissions .table tr > td:first-child {
   width: 50%;
   word-wrap: anywhere;
   overflow-wrap: anywhere;
 }
 
+/* Data Record / Data Publication edit forms */
 .main-expand-collapse {
   display: block;
   margin-bottom: 1rem;
 }
 
-/* Data Record / Data Publication edit forms */
 dmp-field label,
 .label-font {
   margin-bottom: 0.5rem;
