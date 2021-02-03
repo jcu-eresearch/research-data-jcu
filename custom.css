@@ -174,14 +174,8 @@ dmp-form .h3-header {
 }
 
 /* Permission ID wrapping */
-rb-recordpermissions .table {
-  table-layout: fixed;
-}
-
-rb-recordpermissions .table tr > td:first-child {
-  width: 50%;
-  word-wrap: anywhere;
-  overflow-wrap: anywhere;
+rb-recordpermissions .table td:first-child {
+  word-break: break-all;
 }
 
 /* Data Record / Data Publication edit forms */
@@ -262,6 +256,10 @@ repeatable-textfield .value .key-value-pair,
 repeatable-group .value .key-value-pair {
   padding-bottom: 0;
   border-bottom: 0 none;
+}
+
+.key-value-pair .markdown-preview > p:only-child {
+  margin-bottom: 0;
 }
 
 /* Form subsections */
