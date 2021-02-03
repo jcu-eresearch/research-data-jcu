@@ -137,8 +137,8 @@ body {
 
 /* Readability / a11y */
 .panel-default.welcome .panel-title > a::after {
-  content: " >";
-  padding-left: .5rem;
+  content: ">";
+  padding-left: .75rem;
   white-space: nowrap;
   font-weight: bolder;
 }
