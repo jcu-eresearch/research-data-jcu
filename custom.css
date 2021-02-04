@@ -44,6 +44,10 @@ body {
   color: #da291c !important;
 }
 
+.breadcrumb {
+  background-color: #f0f0f0;
+}
+
 /* Remove doubled-up carets on dropdown toggles */
 .dropdown-toggle > .caret {
   display: none;
