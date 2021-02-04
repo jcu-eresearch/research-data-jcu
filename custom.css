@@ -173,9 +173,10 @@ dmp-form .h3-header {
   color: #686868;
 }
 
-/* Permission ID wrapping */
+/* Permissions: hide user ID field to avoid overflow */
+rb-recordpermissions .table th:first-child,
 rb-recordpermissions .table td:first-child {
-  word-break: break-all;
+  display: none;
 }
 
 /* Data Record / Data Publication edit forms */
