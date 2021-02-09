@@ -173,11 +173,6 @@ dmp-form .tab-pane {
   padding-bottom: 0;
 }
 
-dmp-form .h3-header {
-  display: block;
-  margin-bottom: .75rem;
-}
-
 /* Readability / a11y */
 .help-block {
   color: #686868;
@@ -243,12 +238,19 @@ li.key-value-pair > br {
 .h1-header {
   display: block;
   margin-bottom: 1.5rem;
+  font-weight: 500;
   line-height: 1.2;
+}
+
+.h3-header {
+  display: block;
+  margin-bottom: .75rem;
+  font-weight: 600;
 }
 
 repeatable-group > .key-value-pair > .key {
   font-size: 125%;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /* Form subheadings */
