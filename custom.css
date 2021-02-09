@@ -248,6 +248,16 @@ li.key-value-pair > br {
   font-weight: 600;
 }
 
+@media (max-width: 767px) {
+  .h1-header {
+    font-size: 26px;
+  }
+
+  .h3-header {
+    font-size: 20px;
+  }
+}
+
 repeatable-group > .key-value-pair > .key {
   font-size: 125%;
   font-weight: 600;
