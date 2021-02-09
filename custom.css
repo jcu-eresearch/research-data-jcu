@@ -157,6 +157,12 @@ body {
 }
 
 /* Improve spacing */
+dmp-form anchor-button .btn.btn-large,
+dmp-form rb-pdf-list .btn {
+  margin: 0 0 1rem 0;
+  white-space: normal;
+}
+
 dmp-form tabcontainer {
   display: block;
   margin-top: 1.5rem;
@@ -235,6 +241,8 @@ li.key-value-pair > br {
 
 /* Form headings */
 .h1-header {
+  display: block;
+  margin-bottom: 1rem;
   line-height: 1.2;
 }
 
