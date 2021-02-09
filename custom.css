@@ -242,7 +242,7 @@ li.key-value-pair > br {
 /* Form headings */
 .h1-header {
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   line-height: 1.2;
 }
 
