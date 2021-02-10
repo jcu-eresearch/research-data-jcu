@@ -297,7 +297,14 @@ repeatable-group .form-group:last-child {
   margin-bottom: 0;
 }
 
+/* Form autocompletion - a11y */
+.completer-selected-row[_ngcontent-c0] {
+  background-color: #06c !important;
+}
+
+
 /* Show whole search panel - https://trello.com/c/iAiPojHm/199-search-page-panel-cuts-off-drop-down-menu */
 .panel-body[style^="overflow"] {
   overflow: visible !important;
 }
+
